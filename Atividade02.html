@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Emprega Mais</title>
+    <link rel="stylesheet" href="main.css" />
+
+        <h1>Emprega Mais</h1>
+             <p>Conectando talentos a oportunidades na sua região.</p>
+        <h2>Cadastre seu currículo</h2>
+            <p>Preencha seus dados com atenção. Empresas parceiras consultam este formulário para entrar em contato com candidatos.</p>
+            <h2>Atividade 1</h2>
+
+    
+
+  <form action="" method="post">
+   <h4>Dados pessoais</h4>
+   
+    <label>Nome:</label>
+    <input type="text" name="nome">
+
+    <br><br>
+
+    <label>Email:</label>
+    <input type="email" name="email">
+
+    <br><br>
+
+    <label>Crie uma senha de acesso: </label>
+    <input type="password" name="senha">
+
+    <br><br>
+
+     <label>Telefone (somente números): </label>
+    <input type="number" name="telefone">
+
+    <br><br>
+
+    <label>Data de nascimento: </label>
+    <input type="date" name="nascimento">
+
+    <br><br>
+
+    <p>Disponibilidade de horário:</p>
+    <label><input type="radio" name="Disponibilidade" value="Integral"> Período integral</label>
+    <label><input type="radio" name="Disponibilidade" value="Meio período"> Meio período</label>
+    <label><input type="radio" name="Disponibilidade" value="Fins de semana"> Fins de semana</label>
+
+    <br><br>
+
+    <h3>Perfil profissional</h3>
+    <label>Escolaridade:</label>
+    <select name="escolha">
+        <option value="Ensino fundamental incompleto">Ensino fundamenta</option>
+        <option value="Ensino médio incompleto">Ensino médio</option>
+        <option value="Ensino médio completo">Ensino tecnico</option>
+        <option value="Ensino superior incompleto">Ensino superior</option>
+    </select>
+
+  <br><br>
+
+        <label>Cidade onde deseja trabalhar:</label>
+        <select name="cidade">
+            <option value="São Paulo">São Paulo</option>
+            <option value="Rio de Janeiro">Rio de Janeiro</option>
+            <option value="Belo Horizonte">Belo Horizonte</option>
+            <option value="Brasília">Brasília</option>
+        </select>
+
+        <br><br>
+
+        <label>Áreas de interesse:</label>
+        <label><input type="checkbox" name="interesses[]" value="TI"> Vendas</label>
+        <label><input type="checkbox" name="interesses[]" value="Marketing"> Administrativo</label>
+        <label><input type="checkbox" name="interesses[]" value="RH"> Tecnologia </label>
+        <label><input type="checkbox" name="interesses[]" value="RH"> Atendimento </label>
+  </form>
+
+<br><br>
+
+  <label for="mensagem">Fale sobre sua experiência e habilidades:</label><br>
+    <textarea id="mensagem" name="mensagem" rows="4" cols="40" placeholder="Digite sua mensagem aqui..."></textarea>
+    <br><br>
+    
+     <label for="arquivo">Anexe seu currículo em PDF:</label>
+    <input type="file" id="arquivo" name="arquivo">
+    <br><br>
+  
+    <button type="submit">Enviar Currículo</button>
+     <button type="reset">Limpar Formulário</button>
+    <button type="button">Ver todas as vagas</button>
+       
+</form>
+  </body>
