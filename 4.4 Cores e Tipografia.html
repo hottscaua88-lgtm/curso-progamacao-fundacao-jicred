@@ -1,0 +1,130 @@
+<!doctype html>
+<lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Capítulo 4.5</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+
+<h1>4.5 Display e Posicionamento</h1>
+
+<br>
+
+    <h1>1. Entendendo os formatos de cor:</h1>
+    <p>
+      Associe corretamente os exemplos aos seus respectivos tipos de codificação
+      de cor:
+    </p>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f9;
+    }
+
+    table {
+      width: 100%;
+      max-width: 500px;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #2268b8;
+      color: #fff;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .color-preview {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius: 3px;
+      margin-right: 8px;
+      vertical-align: middle;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Relacione as Colunas - Formatos de Cores</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Coluna A – Exemplo</th>
+        <th>Coluna B – Tipo de formato</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>a) <code>#ff0000</code> <span class="color-preview" style="background-color: #ff0000;"></span></td>
+        <td>( <b>b</b> ) Cor nomeada</td>
+      </tr>
+      <tr>
+        <td>b) <code>blue</code> <span class="color-preview" style="background-color: blue;"></span></td>
+        <td>( <b>a</b> ) Cor hexadecimal</td>
+      </tr>
+      <tr>
+        <td>c) <code>rgb(255, 255, 0)</code> <span class="color-preview" style="background-color: rgb(255, 255, 0);"></span></td>
+        <td>( <b>c</b> ) Cor RGB</td>
+      </tr>
+      <tr>
+        <td>d) <code>rgba(0, 0, 0, 0.5)</code> <span class="color-preview" style="background-color: rgba(0, 0, 0, 0.5);"></span></td>
+        <td>( <b>d</b> ) Cor RGBA</td>
+      </tr>
+    </tbody>
+  </table>
+
+<br>
+
+<h1>2. Aplicando estilos de texto</h1>
+<p>Escreva uma regra CSS para a seguinte:<p>
+    <p class="Frase"> Á leitura é uma janela para o mundo.</p>
+<div>
+  <style>
+    .Frase {
+      font-family: 'Georgia', serif;
+      font-size: 20px;
+      text-align: center;
+      font-style: italic;
+    }
+  </style>
+</div>
+
+  <br>
+
+  <h1>3. Corrigindo o CSS</h1>
+  <p>O código abaixo contém alguns erros de sintaxe. Reescreva-o corretamente:</p>
+  <pre><code>h1 {
+  color: "green";
+  font-size: "24px"
+  text-align: center;
+}
+  </code></pre>
+
+<br>
+
+<pre><code>h1 {
+  color: green;
+  font-size: 24px;
+  text-align: center;
+}
+</code></pre>
+
