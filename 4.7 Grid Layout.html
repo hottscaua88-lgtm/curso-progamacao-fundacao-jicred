@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercícios CSS Grid</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        line-height: 1.6;
+      }
+
+      .destaque {
+        color: #27ae60;
+        font-weight: bold;
+      }
+
+      .exercicio {
+        margin-bottom: 30px;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 20px;
+      }
+
+      .grid-ex1 {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 10px;
+        border: 1px dashed #ccc;
+        padding: 10px;
+        margin-top: 10px;
+      }
+
+      .grid-ex2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 100px);
+        gap: 10px;
+        border: 1px dashed #ccc;
+        padding: 10px;
+        margin-top: 10px;
+      }
+
+      .item {
+        background-color: #3498db;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        font-weight: bold;
+      }
+
+      pre {
+        background: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="exercicio">
+      <h2>1. Compreendendo colunas</h2>
+      <p>Observe o código abaixo:</p>
+      <pre><code>.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}</code></pre>
+
+      <p>O que acontecerá com os elementos dentro do container?</p>
+
+      <form>
+        <p>
+          <input type="radio" id="1a" name="q1" disabled />
+          <label for="1a">a) Eles ocuparão 3 colunas de tamanhos iguais</label>
+        </p>
+        <p>
+          <input type="radio" id="1b" name="q1" disabled />
+          <label for="1b"
+            >b) A primeira coluna ocupará o dobro da segunda</label
+          >
+        </p>
+        <p>
+          <input type="radio" id="1c" name="q1" checked disabled />
+          <label for="1c" class="destaque"
+            >c) A primeira coluna será menor e a segunda o dobro dela</label
+          >
+        </p>
+        <p>
+          <input type="radio" id="1d" name="q1" disabled />
+          <label for="1d">d) A primeira coluna será fixa em 1 pixel</label>
+        </p>
+      </form>
+
+      <br />
+
+      <div class="exercicio">
+        <h2>2. Preenchendo lacunas</h2>
+        <p>
+          Complete o código abaixo para criar um grid com 3 colunas de larguras
+          iguais e 2 linhas com 100px de altura cada, usando gap de 10px:
+        </p>
+
+        <pre><code>.container {
+  display: grid;
+  <span class="destaque">grid-template-columns: repeat(3, 1fr);</span> /* ou: 1fr 1fr 1fr */
+  <span class="destaque">grid-template-rows: repeat(2, 100px);</span>  /* ou: 100px 100px */
+  <span class="destaque">gap: 10px;</span>
+}</code></pre>
+      </div>
+    </div>
+  </body>
+</html>

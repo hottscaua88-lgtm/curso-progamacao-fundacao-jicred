@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercícios Media Queries</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .destaque {
+      color: #27ae60;
+      font-weight: bold;
+    }
+
+    .exercicio {
+      margin-bottom: 30px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 20px;
+    }
+
+    .container-demo {
+      background-color: lightgreen;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .container-demo {
+        background-color: lightpink;
+      }
+    }
+
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="exercicio">
+    <h2>1. Interpretando o código</h2>
+    <p>Observe o código abaixo:</p>
+    <pre><code>.container {
+  background-color: lightgreen;
+}
+
+@media (max-width: 600px) {
+  .container {
+    background-color: lightpink;
+  }
+}</code></pre>
+
+    <p>O que acontecerá com o fundo do .container em uma tela de 500px?</p>
+
+    <form>
+      <p><input type="radio" id="1a" name="q1" disabled> <label for="1a">a) Ele ficará verde em todas as telas</label></p>
+      <p><input type="radio" id="1b" name="q1" disabled> <label for="1b">b) Ele mudará para rosa em telas maiores que 600px</label></p>
+      <p><input type="radio" id="1c" name="q1" checked disabled> <label for="1c" class="destaque">c) Ele ficará rosa em telas menores ou iguais a 600px</label></p>
+      <p><input type="radio" id="1d" name="q1" disabled> <label for="1d">d) Nada será alterado</label></p>
+    </form>
+
+    <br>
+
+  <div class="exercicio">
+    <h2>2. Completando a Media Query</h2>
+    <p>Complete a media query abaixo para que o texto do corpo (body) fique com a fonte de 14px apenas em telas menores que 800px:</p>
+
+    <pre><code>@media (<span class="destaque">max-width: 799px</span>) { /* ou max-width: 800px */
+  body {
+    font-size: 14px;
+  }
+}</code></pre>
+  </div>
+
+</body>
+</html>

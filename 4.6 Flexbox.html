@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício Flexbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #ccc;
+      padding: 10px;
+      height: 100px;
+    }
+
+    .item {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+    }
+
+    .correta {
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>1. Identificando propriedades</h2>
+
+  <p>Observe o código abaixo:</p>
+
+  <pre><code>.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}</code></pre>
+
+  <p>O que esse código faz com os elementos filhos dentro da &lt;div class="container"&gt;?</p>
+
+  <form>
+    <p><input type="radio" id="a" name="opcao" disabled> <label for="a">a) Alinha todos os itens à esquerda e ao topo</label></p>
+    <p><input type="radio" id="b" name="opcao" checked disabled> <label for="b" class="correta">b) Centraliza os itens na vertical e distribui com espaço entre eles na horizontal</label></p>
+    <p><input type="radio" id="c" name="opcao" disabled> <label for="c">c) Alinha todos os itens no centro da tela</label></p>
+    <p><input type="radio" id="d" name="opcao" disabled> <label for="d">d) Organiza os itens em forma de coluna com espaço ao redor</label></p>
+  </form>
+</body>
+</html>
+
+<br>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .item {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px 0;
+      border-radius: 4px;
+    }
+
+    .destaque {
+      color: #27ae60;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>2. Completando a regra CSS</h2>
+
+  <p>Complete o código abaixo para que os itens fiquem centralizados horizontalmente e organizados em coluna:</p>
+
+  <pre><code>.container {
+  display: flex;
+  <span class="destaque">flex-direction: column;</span>
+  <span class="destaque">align-items: center;</span>
+}</code></pre>
+
+</body>
+</html>
