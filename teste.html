@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Cauã Vitorino | Portfólio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+        --bg: #f6f4ef;
+        --ink: #2a2d34;
+        --muted: #5d6068;
+        --navy: #2c4468;
+        --navy-d: #1f3355;
+        --card: #dcd9d5;
+        --card2: #e4e2dd;
+        --ph: #bdb7b3;
+        --line: #d8d5cf;
+        --accent: #b8651b;
+        --blue: #2c6fa8;
+        --field: #f4f3f0;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #17191e;
+          --ink: #e8e6e1;
+          --muted: #a3a6ad;
+          --card: #2a2d34;
+          --card2: #30343c;
+          --ph: #454a54;
+          --line: #2f333b;
+          --field: #1f2229;
+        }
+      }
+      :root[data-theme="dark"] {
+        --bg: #17191e;
+        --ink: #e8e6e1;
+        --muted: #a3a6ad;
+        --card: #2a2d34;
+        --card2: #30343c;
+        --ph: #454a54;
+        --line: #2f333b;
+        --field: #1f2229;
+      }
+      html {
+        scroll-padding-top: env(safe-area-inset-top, 0px);
+        scroll-behavior: smooth;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, system-ui, sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Playfair Display", Georgia, serif;
+        margin: 0;
+      }
+      nav {
+        border-bottom: 1px solid var(--line);
+      }
+      nav ul {
+        list-style: none;
+        margin: 0 auto;
+        padding: 10px 16px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px 24px;
+      }
+      nav a {
+        color: var(--ink);
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 500;
+      }
+      nav a:hover {
+        color: var(--accent);
+      }
+      section {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 44px 20px 20px;
+        text-align: center;
+      }
+      .hero {
+        background: var(--navy);
+        color: #fff;
+        border-radius: 14px;
+        max-width: 760px;
+        margin: 24px auto 0;
+        padding: 32px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        text-align: left;
+        box-shadow: 0 8px 22px rgba(44, 68, 104, 0.28);
+      }
+      .hero h1 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+      .hero p {
+        margin: 0;
+        font-style: italic;
+        font-size: 12px;
+        max-width: 340px;
+        line-height: 1.5;
+      }
+      .stack {
+        position: relative;
+        width: 120px;
+        height: 110px;
+        flex: none;
+      }
+      .stack i {
+        position: absolute;
+        width: 60px;
+        height: 88px;
+        border-radius: 5px;
+        top: 8px;
+      }
+      .stack i:nth-child(1) {
+        background: #eceae6;
+        left: 6px;
+        transform: rotate(-12deg);
+      }
+      .stack i:nth-child(2) {
+        background: #1c1c1e;
+        left: 36px;
+        top: 0;
+        height: 96px;
+        z-index: 2;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      }
+      .stack i:nth-child(3) {
+        background: #6b7585;
+        left: 62px;
+        transform: rotate(10deg);
+      }
+      h2 {
+        font-size: 26px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .sub {
+        display: block;
+        font-size: 10px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-top: 6px;
+      }
+      .bar {
+        display: block;
+        width: 26px;
+        height: 2px;
+        background: var(--blue);
+        margin: 8px auto 28px;
+      }
+      .about {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 36px;
+        text-align: left;
+        max-width: 640px;
+        margin: 0 auto;
+      }
+      .avatar {
+        width: 120px;
+        height: 120px;
+        flex: none;
+        background: #6a6a6a;
+        border-radius: 6px;
+        display: grid;
+        place-items: center;
+      }
+      .avatar svg {
+        width: 34px;
+        height: 34px;
+        fill: #b9b9b9;
+      }
+      .about p {
+        margin: 0 0 12px;
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .about b {
+        color: var(--blue);
+      }
+      .tags {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+      .tags span {
+        background: var(--card2);
+        border-radius: 20px;
+        padding: 2px 9px;
+        font-size: 9px;
+        color: var(--ink);
+      }
+      .skills {
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+      .skill {
+        background: var(--card);
+        width: 192px;
+        padding: 16px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+      }
+      .skill h3 {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+      .skill ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        line-height: 1.8;
+      }
+      .skill li:before {
+        content: "▪ ";
+        color: var(--ink);
+      }
+      .cards {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .card {
+        background: var(--card);
+        width: 188px;
+        padding: 5px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        text-align: left;
+      }
+      .ph {
+        background: var(--ph);
+        height: 128px;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        font-size: 7px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        color: var(--navy);
+      }
+      .ph svg {
+        width: 20px;
+        height: 20px;
+        stroke: var(--navy);
+        fill: none;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 4px 4px;
+        font-size: 10px;
+      }
+      .meta h3 {
+        font-size: 11px;
+        font-weight: 500;
+      }
+      .meta button {
+        background: none;
+        border: 0;
+        font: inherit;
+        font-size: 7px;
+        font-weight: 600;
+        color: var(--ink);
+        cursor: pointer;
+        padding: 0;
+      }
+      .card p {
+        display: none;
+        margin: 0;
+        padding: 2px 6px 8px;
+        font-size: 10px;
+        color: var(--muted);
+      }
+      .card.open p {
+        display: block;
+      }
+      form {
+        background: var(--card2);
+        max-width: 316px;
+        margin: 0 auto;
+        padding: 16px;
+        border-radius: 12px;
+        text-align: left;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        display: block;
+        font-size: 8px;
+        font-weight: 600;
+        margin: 6px 0 3px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        background: var(--field);
+        color: var(--ink);
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        padding: 7px 9px;
+        font: inherit;
+        font-size: 9px;
+      }
+      textarea {
+        height: 60px;
+        resize: vertical;
+      }
+      input:focus,
+      textarea:focus,
+      button:focus-visible,
+      a:focus-visible {
+        outline: 2px solid var(--blue);
+        outline-offset: 2px;
+      }
+      .send {
+        width: 100%;
+        margin-top: 12px;
+        background: var(--navy);
+        color: #fff;
+        border: 0;
+        border-radius: 5px;
+        padding: 9px;
+        font: inherit;
+        font-size: 9px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .send:hover {
+        background: var(--navy-d);
+      }
+      footer {
+        background: var(--navy-d);
+        color: #fff;
+        text-align: center;
+        padding: 22px 16px;
+        margin-top: 44px;
+      }
+      footer h3 {
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+      .soc {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 10px;
+      }
+      .soc span {
+        width: 10px;
+        height: 10px;
+        background: #dfe5ee;
+        border-radius: 2px;
+      }
+      footer small {
+        font-size: 7px;
+        color: #9fb0cc;
+      }
+      @media (max-width: 640px) {
+        .hero {
+          flex-direction: column;
+          align-items: flex-start;
+          margin: 20px 16px 0;
+        }
+        .about {
+          flex-direction: column;
+          text-align: center;
+        }
+        .tags {
+          justify-content: center;
+        }
+        .stack {
+          align-self: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#bem-vindo">Bem-Vindo</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero" id="bem-vindo">
+        <div>
+          <h1>Cauã Vitorino</h1>
+          <p>
+            "O palpite por criar código eficiente e resolver desafios por meio
+            da tecnologia. Explore meus projetos e descubra mais sobre meu
+            trabalho!"
+          </p>
+        </div>
+        <div class="stack" aria-hidden="true"><i></i><i></i><i></i></div>
+      </div>
+
+      <section id="sobre">
+        <h2>Sobre mim</h2>
+        <span class="sub">Conheça um pouco sobre a minha trajetória</span
+        ><span class="bar"></span>
+        <div class="about">
+          <div class="avatar">
+
+       <img class="avatar rounded-2 avatar-user" src="https://avatars.githubusercontent.com/u/280186725?s=400&u=dbb69ac…&v=4" width="200" height="200" alt="@hottscaua88-lgtm">
+              
+          </div>
+          <div>
+            <p>
+              Como desenvolvedor Front-end, tenho sólidas habilidades em
+              <b>HTML</b>, <b>CSS</b> e <b>Web Design</b>. Sou focado em criar
+              interfaces modernas, funcionais e atrativas, sempre garantindo uma
+              excelente experiência para o usuário e um código limpo e
+              otimizado.
+            </p>
+            <div class="tags">
+              <span>Front-end</span><span>Design de layout</span
+              ><span>Iniciante</span>
+            </div>
+          </div>
+      </section>
+
+      <section id="habilidades">
+        <h2>Habilidades</h2>
+        <span class="bar"></span>
+        <div class="skills">
+          <div class="skill">
+            <h3>Técnicas</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>DESIGNER</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h3>Manuais</h3>
+            <ul>
+              <li>HARDWARE</li>
+              <li>PEÇAS EM GERAL</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio">
+        <h2>Portfólio</h2>
+        <span class="sub">Trabalhos mais recentes</span
+        ><span class="bar"></span>
+        <div class="cards">
+          <div class="card">
+            <div class="ph">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="12" rx="1.5" />
+                <path d="M8 20h8M12 16v4" /></svg
+                >DESIGN DE LAYOUT
+            </div>
+            <div class="meta">
+              <h3>Página Inicial</h3>
+              <button type="button" aria-expanded="false">
+                Ver detalhes ▾
+              </button>
+            </div>
+            <p>
+              Layout responsivo de página inicial com foco em clareza e
+              hierarquia visual.
+            </p>
+          </div>
+          <div class="card">
+            <div class="ph">
+              <svg viewBox="0 0 24 24">
+                <rect x="7" y="2.5" width="10" height="19" rx="2" />
+                <path d="M11 18.5h2" /></svg
+              >DESIGN DE APPS
+            </div>
+            <div class="meta">
+              <h3>Interface Móvel</h3>
+              <button type="button" aria-expanded="false">
+                Ver detalhes ▾
+              </button>
+            </div>
+            <p>
+              Protótipo de interface para celular, pensado para uso com uma mão.
+            </p>
+          </div>
+          <div class="card">
+            <div class="ph">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M14.5 6.5a4 4 0 0 0 5 5L11 20a2.1 2.1 0 0 1-3-3l8.5-8.5"
+                />
+                <path d="M4 4l5 5M4 8l4-4" /></svg
+              >MANUTENÇÃO E REPAROS
+            </div>
+            <div class="meta">
+              <h3>Montagem &amp; Testes</h3>
+              <button type="button" aria-expanded="false">
+                Ver detalhes ▾
+              </button>
+            </div>
+            <p>Montagem de peças, testes e reparos em geral.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato">
+        <h2>Contato</h2>
+        <span class="sub">Vamos trabalhar juntos?</span
+        ><span class="bar"></span>
+        <form
+          onsubmit="
+            event.preventDefault();
+            this.querySelector('.send').textContent = 'Mensagem enviada!';
+          "
+        >
+          <label for="n">Nome</label
+          ><input id="n" type="text" placeholder="O seu nome" required />
+          <label for="e">E-mail</label
+          ><input
+            id="e"
+            type="email"
+            placeholder="seu.email@exemplo.com"
+            required
+          />
+          <label for="m">Mensagem</label
+          ><textarea
+            id="m"
+            placeholder="Escreva a sua mensagem..."
+            required
+          ></textarea>
+          <button class="send" type="submit">Enviar Mensagem</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <h3>Cauã Vitorino</h3>
+      <div class="soc" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <small>© 2026 Cauã Vitorino. Todos os direitos reservados.</small>
+    </footer>
+  </body>
+</html>
