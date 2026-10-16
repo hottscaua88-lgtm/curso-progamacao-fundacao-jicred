@@ -1,0 +1,24 @@
+ <footer>
+      <h3>Cauã Vitorino</h3>
+      <div class="soc" aria-hidden="true">
+        <span>
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" width="10" height="10" alt="GitHub" />
+        </span><span>
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" width="10" height="10" alt="LinkedIn" />
+        </span><span>
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" width="10" height="10" alt="Instagram" />
+        </span>
+      </div>
+      <small>© 2026 Cauã Vitorino. Todos os direitos reservados.</small>
+    </footer>
+  </body>
+</html>
+
+
+.soc img {
+        width: 15px;
+        height: 20px;
+        margin: 1px 6px
+       ;
+      }
+
